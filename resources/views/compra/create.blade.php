@@ -26,7 +26,7 @@
             <!------Compra producto---->
             <div class="col-xl-8">
                 <div class="text-white bg-primary p-1 text-center">
-                    Detalles de la compra
+                    Detalles de la Compra
                 </div>
                 <div class="p-3 border border-3 border-primary">
                     <div class="row">
@@ -42,19 +42,19 @@
                         <!-----Cantidad---->
                         <div class="col-sm-4 mb-2">
                             <label for="cantidad" class="form-label">Cantidad:</label>
-                            <input type="number" name="cantidad" id="cantidad" class="form-control">
+                            #<input type="number" name="cantidad" id="cantidad" class="form-control">
                         </div>
 
                         <!-----Precio de compra---->
                         <div class="col-sm-4 mb-2">
                             <label for="precio_compra" class="form-label">Precio de compra:</label>
-                            <input type="number" name="precio_compra" id="precio_compra" class="form-control" step="0.1">
+                            $<input type="number" name="precio_compra" id="precio_compra" class="form-control" step="0.1">
                         </div>
 
                         <!-----Precio de venta---->
                         <div class="col-sm-4 mb-2">
                             <label for="precio_venta" class="form-label">Precio de venta:</label>
-                            <input type="number" name="precio_venta" id="precio_venta" class="form-control" step="0.1">
+                            $<input type="number" name="precio_venta" id="precio_venta" class="form-control" step="0.1">
                         </div>
 
                         <!-----botón para agregar--->
@@ -96,8 +96,8 @@
                                         </tr>
                                         <tr>
                                             <th></th>
-                                            <th colspan="4">IGV %</th>
-                                            <th colspan="2"><span id="igv">0</span></th>
+                                            <th colspan="4">IVA %</th>
+                                            <th colspan="2"><span id="iva">0</span></th>
                                         </tr>
                                         <tr>
                                             <th></th>
@@ -112,7 +112,7 @@
                         <!--Boton para cancelar compra-->
                         <div class="col-12 mt-2">
                             <button id="cancelar" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Cancelar compra
+                                Cancelar Compra
                             </button>
                         </div>
 
@@ -123,7 +123,7 @@
             <!-----Compra---->
             <div class="col-xl-4">
                 <div class="text-white bg-success p-1 text-center">
-                    Datos generales
+                    Datos Generales
                 </div>
                 <div class="p-3 border border-3 border-success">
                     <div class="row">
@@ -164,7 +164,7 @@
 
                         <!--Impuesto---->
                         <div class="col-sm-6 mb-2">
-                            <label for="impuesto" class="form-label">Impuesto(IGV):</label>
+                            <label for="impuesto" class="form-label">Impuesto(IVA):</label>
                             <input readonly type="text" name="impuesto" id="impuesto" class="form-control border-success">
                             @error('impuesto')
                             <small class="text-danger">{{ '*'.$message }}</small>
@@ -186,7 +186,7 @@
 
                         <!--Botones--->
                         <div class="col-12 mt-4 text-center">
-                            <button type="submit" class="btn btn-success" id="guardar">Realizar compra</button>
+                            <button type="submit" class="btn btn-success" id="guardar">Realizar Compra</button>
                         </div>
 
                     </div>
@@ -238,11 +238,11 @@
     let cont = 0;
     let subtotal = [];
     let sumas = 0;
-    let igv = 0;
+    let iva = 0;
     let total = 0;
 
     //Constantes
-    const impuesto = 18;
+    const impuesto = 13;
 
     function cancelarCompra() {
         //Elimar el tbody de la tabla
@@ -264,12 +264,12 @@
         cont = 0;
         subtotal = [];
         sumas = 0;
-        igv = 0;
+        iva = 0;
         total = 0;
 
         //Mostrar los campos calculados
         $('#sumas').html(sumas);
-        $('#igv').html(igv);
+        $('#iva').html(iva);
         $('#total').html(total);
         $('#impuesto').val(impuesto + '%');
         $('#inputTotal').val(total);
@@ -310,8 +310,8 @@
                     //Calcular valores
                     subtotal[cont] = round(cantidad * precioCompra);
                     sumas += subtotal[cont];
-                    igv = round(sumas / 100 * impuesto);
-                    total = round(sumas + igv);
+                    iva = round(sumas / 100 * impuesto);
+                    total = round(sumas + iva);
 
                     //Crear la fila
                     let fila = '<tr id="fila' + cont + '">' +
@@ -332,20 +332,20 @@
 
                     //Mostrar los campos calculados
                     $('#sumas').html(sumas);
-                    $('#igv').html(igv);
+                    $('#iva').html(iva);
                     $('#total').html(total);
-                    $('#impuesto').val(igv);
+                    $('#impuesto').val(iva);
                     $('#inputTotal').val(total);
                 } else {
-                    showModal('Precio de compra incorrecto');
+                    showModal('Precio de compra incorrecto.');
                 }
 
             } else {
-                showModal('Valores incorrectos');
+                showModal('Valores incorrectos.');
             }
 
         } else {
-            showModal('Le faltan campos por llenar');
+            showModal('Le faltan campos por llenar.');
         }
 
 
@@ -355,14 +355,14 @@
     function eliminarProducto(indice) {
         //Calcular valores
         sumas -= round(subtotal[indice]);
-        igv = round(sumas / 100 * impuesto);
-        total = round(sumas + igv);
+        iva = round(sumas / 100 * impuesto);
+        total = round(sumas + iva);
 
         //Mostrar los campos calculados
         $('#sumas').html(sumas);
-        $('#igv').html(igv);
+        $('#iva').html(iva);
         $('#total').html(total);
-        $('#impuesto').val(igv);
+        $('#impuesto').val(iva);
         $('#InputTotal').val(total);
 
         //Eliminar el fila de la tabla

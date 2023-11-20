@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Editar presentación')
+@section('title','Editar Presentación')
 
 @push('css')
 <style>
@@ -16,7 +16,7 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="{{ route('panel') }}">Inicio</a></li>
         <li class="breadcrumb-item"><a href="{{ route('presentaciones.index')}}">Presentaciones</a></li>
-        <li class="breadcrumb-item active">Editar presentación</li>
+        <li class="breadcrumb-item active">Editar Presentación</li>
     </ol>
 
     <div class="card text-bg-light">
@@ -48,7 +48,7 @@
             </div>
             <div class="card-footer text-center">
                 <button type="submit" class="btn btn-primary">Actualizar</button>
-                <button type="reset" class="btn btn-secondary">Reiniciar</button>
+                <button type="reset" class="btn btn-secondary">Cancelar</button>
             </div>
         </form>
     </div>

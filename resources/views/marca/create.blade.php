@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Crear marca')
+@section('title','Crear Marca')
 
 @push('css')
 <style>

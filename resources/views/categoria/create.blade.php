@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Crear categoría')
+@section('title','Crear Categoría')
 
 @push('css')
 <style>
@@ -16,7 +16,7 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="{{ route('panel') }}">Inicio</a></li>
         <li class="breadcrumb-item"><a href="{{ route('categorias.index')}}">Categorías</a></li>
-        <li class="breadcrumb-item active">Crear categoría</li>
+        <li class="breadcrumb-item active">Crear Categoría</li>
     </ol>
 
     <div class="card text-bg-light">

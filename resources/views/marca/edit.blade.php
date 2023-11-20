@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Editar marca')
+@section('title','Editar Marca')
 
 @push('css')
 <style>
@@ -47,7 +47,7 @@
             </div>
             <div class="card-footer text-center">
                 <button type="submit" class="btn btn-primary">Actualizar</button>
-                <button type="reset" class="btn btn-secondary">Reiniciar</button>
+                <button type="reset" class="btn btn-secondary">Cancelar</button>
             </div>
         </form>
     </div>

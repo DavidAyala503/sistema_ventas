@@ -51,7 +51,7 @@ class marcaController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('marcas.index')->with('success', 'Marca registrada');
+        return redirect()->route('marcas.index')->with('success', 'Marca Registrada.');
     }
 
     /**
@@ -78,7 +78,7 @@ class marcaController extends Controller
         Caracteristica::where('id', $marca->caracteristica->id)
             ->update($request->validated());
 
-        return redirect()->route('marcas.index')->with('success', 'Marca editada');
+        return redirect()->route('marcas.index')->with('success', 'Marca Actualizada.');
     }
 
     /**
@@ -93,13 +93,13 @@ class marcaController extends Controller
                 ->update([
                     'estado' => 0
                 ]);
-            $message = 'Marca eliminada';
+            $message = 'Marca Desactivada.';
         } else {
             Caracteristica::where('id', $marca->caracteristica->id)
                 ->update([
                     'estado' => 1
                 ]);
-            $message = 'Marca restaurada';
+            $message = 'Marca Activada.';
         }
 
         return redirect()->route('marcas.index')->with('success', $message);
