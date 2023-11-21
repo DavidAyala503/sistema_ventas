@@ -6,7 +6,6 @@
 @endpush
 @push('css')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
     <style>
@@ -45,8 +44,11 @@
                     <thead class="table-dark">
                         <tr>
                             <th>Comprobante</th>
+                            <th>Número</th>
                             <th>Proveedor</th>
-                            <th>Fecha y hora</th>
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
                             <th>Total</th>
                             <th>Acciones</th>
                         </tr>
@@ -55,28 +57,26 @@
                         @foreach ($compras as $item)
                             <tr>
                                 <td>
-                                    <div class="row-not-space">
-                                        <p class="fw-semibold mb-1">{{ $item->comprobante->tipo_comprobante }}</p>
-                                        <br>
-                                        <p class="text-muted mb-0">{{ $item->numero_comprobante }}</p>
-                                    </div>
+                                    <p class="fw-semibold mb-1">{{ $item->comprobante->tipo_comprobante }}</p>
                                 </td>
                                 <td>
-                                    <div class="row-not-space">
-                                        <p class="fw-semibold mb-1">{{ ucfirst($item->proveedore->persona->tipo_persona) }}
-                                        </p>
-                                        <p class="text-muted mb-0">{{ $item->proveedore->persona->razon_social }}</p>
-                                    </div>
+                                    <p class="text-muted mb-0">{{ $item->numero_comprobante }}</p>
                                 </td>
                                 <td>
-                                    <div class="row-not-space">
-                                        <p class="fw-semibold mb-1"><span class="m-1"><i
-                                                    class="fa-solid fa-calendar-days"></i></span>{{ \Carbon\Carbon::parse($item->fecha_hora)->format('d-m-Y') }}
-                                        </p>
-                                        <p class="fw-semibold mb-0"><span class="m-1"><i
-                                                    class="fa-solid fa-clock"></i></span>{{ \Carbon\Carbon::parse($item->fecha_hora)->format('H:i') }}
-                                        </p>
-                                    </div>
+                                    <p class="text-muted mb-0">{{ $item->proveedore->persona->razon_social }}</p>
+                                </td>
+                                <td>
+                                    <p class="fw-semibold mb-1">{{ ucfirst($item->proveedore->persona->tipo_persona) }}
+                                </td>
+                                <td>
+                                    <p class="fw-semibold mb-1"><span class="m-1"><i
+                                                class="fa-solid fa-calendar-days"></i></span>{{ \Carbon\Carbon::parse($item->fecha_hora)->format('d-m-Y') }}
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="fw-semibold mb-0"><span class="m-1"><i
+                                                class="fa-solid fa-clock"></i></span>{{ \Carbon\Carbon::parse($item->fecha_hora)->format('H:i') }}
+                                    </p>
                                 </td>
                                 <td>
                                     ${{ $item->total }}
@@ -153,7 +153,7 @@
                 buttons: [{
                         extend: 'excelHtml5',
                         exportOptions: {
-                            columns: [0, 1, 2, 3]
+                            columns: [0, 1, 2, 3, 4, 5, 6],
                         },
                         text: 'EXCEL',
                         titleAttr: 'Reporte en Excel',
@@ -162,7 +162,7 @@
                     {
                         extend: 'pdfHtml5',
                         exportOptions: {
-                            columns: [0, 1, 2, 3],
+                            columns: [0, 1, 2, 3, 4, 5, 6],
                         },
                         text: 'PDF',
                         //download: 'open',
@@ -174,7 +174,7 @@
                             // Centrar y ajustar ancho de la tabla en el PDF
                             doc.defaultStyle.alignment = 'center';
                             doc.content[1].table.widths = ['*',
-                                '*', '*', '*'
+                                '*', '*', '*', '*', '*', '*'
                             ]; // Ajusta el ancho de las columnas
 
                             // Alinea el texto de las filas a la izquierda
@@ -188,7 +188,7 @@
                     {
                         extend: 'pdfHtml5',
                         exportOptions: {
-                            columns: [0, 1, 2, 3],
+                            columns: [0, 1, 2, 3, 4, 5, 6],
                         },
                         orientation: 'landscape',
                         pageSize: 'LEGAL',
@@ -200,7 +200,7 @@
                             // Centrar y ajustar ancho de la tabla en el PDF
                             doc.defaultStyle.alignment = 'center';
                             doc.content[1].table.widths = ['*',
-                                '*', '*', '*'
+                                '*', '*', '*', '*', '*', '*'
                             ]; // Ajusta el ancho de las columnas
 
                             // Alinea el texto de las filas a la izquierda
