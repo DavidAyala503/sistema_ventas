@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Ver venta')
+@section('title','Ver Venta')
 
 @push('css')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -34,7 +34,7 @@
     <div class="card mb-4">
 
         <div class="card-header">
-            Datos generales de la venta
+            Datos Generales de la Venta
         </div>
 
         <div class="card-body">
@@ -44,7 +44,7 @@
                 <div class="col-sm-6">
                     <div class="input-group" id="hide-group">
                         <span class="input-group-text"><i class="fa-solid fa-file"></i></span>
-                        <input disabled type="text" class="form-control" value="Tipo de comprobante: ">
+                        <input disabled type="text" class="form-control" value="Tipo de Comprobante: ">
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -60,7 +60,7 @@
                 <div class="col-sm-6">
                     <div class="input-group" id="hide-group">
                         <span class="input-group-text"><i class="fa-solid fa-hashtag"></i></span>
-                        <input disabled type="text" class="form-control" value="Número de comprobante: ">
+                        <input disabled type="text" class="form-control" value="Número de Comprobante: ">
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -162,7 +162,7 @@
     <div class="card mb-2">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Tabla de detalle de la venta
+            Detalle de la Venta
         </div>
         <div class="card-body table-responsive">
             <table class="table table-striped">
@@ -205,7 +205,7 @@
                         <th id="th-suma"></th>
                     </tr>
                     <tr>
-                        <th colspan="4">IGV:</th>
+                        <th colspan="4">IVA(13%):</th>
                         <th id="th-igv"></th>
                     </tr>
                     <tr>

@@ -114,7 +114,7 @@ class ventaController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('ventas.index')->with('success','Venta exitosa');
+        return redirect()->route('ventas.index')->with('success','Venta Registrada Exitosamnete.');
     }
 
     /**
@@ -151,6 +151,6 @@ class ventaController extends Controller
             'estado' => 0
         ]);
 
-        return redirect()->route('ventas.index')->with('success','Venta eliminada');
+        return redirect()->route('ventas.index')->with('success','Venta Eliminada.');
     }
 }
