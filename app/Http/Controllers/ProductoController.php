@@ -92,7 +92,7 @@ class ProductoController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('productos.index')->with('success', 'Producto registrado');
+        return redirect()->route('productos.index')->with('success', 'Producto Registrado.');
     }
 
     /**
@@ -167,7 +167,7 @@ class ProductoController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('productos.index')->with('success','Producto editado');
+        return redirect()->route('productos.index')->with('success','Producto Actualizado.');
     }
 
     /**
@@ -182,13 +182,13 @@ class ProductoController extends Controller
                 ->update([
                     'estado' => 0
                 ]);
-            $message = 'Producto eliminado';
+            $message = 'Producto Desactivado.';
         } else {
             Producto::where('id', $producto->id)
                 ->update([
                     'estado' => 1
                 ]);
-            $message = 'Producto restaurado';
+            $message = 'Producto Activado.';
         }
 
         return redirect()->route('productos.index')->with('success', $message);

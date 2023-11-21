@@ -12,7 +12,7 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="{{ route('panel') }}">Inicio</a></li>
         <li class="breadcrumb-item"><a href="{{ route('clientes.index')}}">Clientes</a></li>
-        <li class="breadcrumb-item active">Editar cliente</li>
+        <li class="breadcrumb-item active">Editar Cliente</li>
     </ol>
 
     <div class="card text-bg-light">
@@ -29,9 +29,9 @@
                     <!-------Razón social------->
                     <div class="col-12">
                         @if ($cliente->persona->tipo_persona == 'natural')
-                        <label id="label-natural" for="razon_social" class="form-label">Nombres y apellidos:</label>
+                        <label id="label-natural" for="razon_social" class="form-label">Nombres y Apellidos:</label>
                         @else
-                        <label id="label-juridica" for="razon_social" class="form-label">Nombre de la empresa:</label>
+                        <label id="label-juridica" for="razon_social" class="form-label">Nombre de la Empresa:</label>
                         @endif
 
                         <input required type="text" name="razon_social" id="razon_social" class="form-control" value="{{old('razon_social',$cliente->persona->razon_social)}}">
@@ -52,7 +52,7 @@
 
                     <!--------------Documento------->
                     <div class="col-md-6">
-                        <label for="documento_id" class="form-label">Tipo de documento:</label>
+                        <label for="documento_id" class="form-label">Tipo de Documento:</label>
                         <select class="form-select" name="documento_id" id="documento_id">
                             @foreach ($documentos as $item)
                             @if ($cliente->persona->documento_id == $item->id)
@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label for="numero_documento" class="form-label">Numero de documento:</label>
+                        <label for="numero_documento" class="form-label">Numero de Documento:</label>
                         <input required type="text" name="numero_documento" id="numero_documento" class="form-control" value="{{old('numero_documento',$cliente->persona->numero_documento)}}">
                         @error('numero_documento')
                         <small class="text-danger">{{'*'.$message}}</small>
@@ -79,7 +79,8 @@
 
             </div>
             <div class="card-footer text-center">
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <button type="reset" class="btn btn-secondary">Cancelar</button>
             </div>
         </form>
     </div>

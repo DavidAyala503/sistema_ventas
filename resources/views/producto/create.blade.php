@@ -18,7 +18,7 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="{{ route('panel') }}">Inicio</a></li>
         <li class="breadcrumb-item"><a href="{{ route('productos.index')}}">Productos</a></li>
-        <li class="breadcrumb-item active">Crear producto</li>
+        <li class="breadcrumb-item active">Crear Producto</li>
     </ol>
 
     <div class="card">
@@ -101,7 +101,7 @@
 
                     <!---Categorías---->
                     <div class="col-md-6">
-                        <label for="categorias" class="form-label">Categorías:</label>
+                        <label for="categorias" class="form-label">Categoría:</label>
                         <select data-size="4" title="Seleccione las categorías" data-live-search="true" name="categorias[]" id="categorias" class="form-control selectpicker show-tick" multiple>
                             @foreach ($categorias as $item)
                             <option value="{{$item->id}}" {{ (in_array($item->id , old('categorias',[]))) ? 'selected' : '' }}>{{$item->nombre}}</option>

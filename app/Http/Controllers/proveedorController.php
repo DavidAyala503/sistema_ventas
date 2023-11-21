@@ -53,7 +53,7 @@ class proveedorController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('proveedores.index')->with('success', 'Proveedor registrado');
+        return redirect()->route('proveedores.index')->with('success', 'Proveedor Registrado.');
     }
 
     /**
@@ -90,7 +90,7 @@ class proveedorController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('proveedores.index')->with('success','Proveedor editado');
+        return redirect()->route('proveedores.index')->with('success','Proveedor Actualizado.');
     }
 
     /**
@@ -105,13 +105,13 @@ class proveedorController extends Controller
                 ->update([
                     'estado' => 0
                 ]);
-            $message = 'Proveedor eliminado';
+            $message = 'Proveedor Desactivado';
         } else {
             Persona::where('id', $persona->id)
                 ->update([
                     'estado' => 1
                 ]);
-            $message = 'Proveedor restaurado';
+            $message = 'Proveedor Activado.';
         }
 
         return redirect()->route('proveedores.index')->with('success', $message);

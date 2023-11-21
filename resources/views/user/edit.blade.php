@@ -20,7 +20,7 @@
             @method('PATCH')
             @csrf
             <div class="card-header">
-                <p class="">Nota: Los usuarios son los que pueden ingresar al sistema</p>
+                <p class="">Nota: Los usuarios son los que pueden ingresar al sistema.</p>
             </div>
             <div class="card-body">
                 <!---Nombre---->
@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="form-text">
-                            Escriba un solo nombre
+                            Escriba un solo nombre.
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="form-text">
-                            Dirección de correo eléctronico
+                            Dirección de correo eléctronico.
                         </div>
                     </div>
                     <div class="col-lg-2">

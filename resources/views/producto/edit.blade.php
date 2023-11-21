@@ -18,7 +18,7 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="{{ route('panel') }}">Inicio</a></li>
         <li class="breadcrumb-item"><a href="{{ route('productos.index')}}">Productos</a></li>
-        <li class="breadcrumb-item active">Editar producto</li>
+        <li class="breadcrumb-item active">Editar Producto</li>
     </ol>
 
     <div class="card text-bg-light">
@@ -109,7 +109,7 @@
 
                     <!---Categorías---->
                     <div class="col-md-6">
-                        <label for="categorias" class="form-label">Categorías:</label>
+                        <label for="categorias" class="form-label">Categoría:</label>
                         <select data-size="4" title="Seleccione las categorías" data-live-search="true" name="categorias[]" id="categorias" class="form-control selectpicker show-tick" multiple>
                             @foreach ($categorias as $item)
                             @if (in_array($item->id,$producto->categorias->pluck('id')->toArray()))
@@ -127,8 +127,8 @@
 
             </div>
             <div class="card-footer text-center">
-                <button type="submit" class="btn btn-primary">Guardar</button>
-                <button type="reset" class="btn btn-secondary">Reiniciar</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <button type="reset" class="btn btn-secondary">Cancelar</button>
             </div>
         </form>
     </div>

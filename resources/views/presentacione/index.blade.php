@@ -224,7 +224,7 @@
                     }
                 ],
                 language: {
-                    "search": "Buscar presentaciones:",
+                    "search": "Buscar Presentaciones:",
                     "lengthMenu": "Mostrar _MENU_ registros por pagina",
                     "info": "Mostrando pagina _PAGE_ de _PAGES_",
                     "paginate": {

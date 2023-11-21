@@ -63,7 +63,7 @@ class userController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('users.index')->with('success', 'usuario registrado');
+        return redirect()->route('users.index')->with('success', 'Usuario Registrado.');
     }
 
     /**
@@ -109,7 +109,7 @@ class userController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('users.index')->with('success','Usuario editado');
+        return redirect()->route('users.index')->with('success','Usuario Actualizado.');
     }
 
     /**
@@ -126,6 +126,6 @@ class userController extends Controller
         //Eliminar usuario
         $user->delete();
 
-        return redirect()->route('users.index')->with('success','Usuario eliminado');
+        return redirect()->route('users.index')->with('success','Usuario Eliminado.');
     }
 }

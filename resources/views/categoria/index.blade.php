@@ -36,7 +36,7 @@
                 Listado de Categorías
             </div>
             <div class="card-body">
-                <table id="datatablesSimple" class="table table-striped table-bordered" >
+                <table id="datatablesSimple" class="table table-striped table-bordered">
                     <thead class="table-dark">
                         <tr>
                             <th>Nombre</th>
@@ -178,7 +178,7 @@
                         },
                         text: 'EXCEL',
                         titleAttr: 'Reporte en Excel',
-                        title: 'Informe de Categorias - ' + obtenerFechaYHora()
+                        title: 'Informe de CategoríaS - ' + obtenerFechaYHora()
                     },
                     {
                         extend: 'pdfHtml5',
@@ -187,7 +187,7 @@
                         },
                         text: 'PDF',
                         titleAttr: 'Reporte en PDF',
-                        title: 'Informe de Categorias - ' + obtenerFechaYHora(),
+                        title: 'Informe de CategoríaS - ' + obtenerFechaYHora(),
                         customize: function(doc) {
                             // Centrar y ajustar ancho de la tabla en el PDF
                             doc.defaultStyle.alignment = 'center';
@@ -211,7 +211,7 @@
                         text: 'IMPRIMIR',
                         titleAttr: 'Imprimir Reporte',
                         download: 'open',
-                        title: 'Informe de Categorias - ' + obtenerFechaYHora(),
+                        title: 'Informe de CategoríaS - ' + obtenerFechaYHora(),
                         customize: function(doc) {
                             // Centrar y ajustar ancho de la tabla en el PDF
                             doc.defaultStyle.alignment = 'center';
@@ -229,7 +229,7 @@
                     }
                 ],
                 language: {
-                    "search": "Buscar categoria:",
+                    "search": "Buscar Categorias:",
                     "lengthMenu": "Mostrar _MENU_ registros por pagina",
                     "info": "Mostrando pagina _PAGE_ de _PAGES_",
                     "paginate": {

@@ -37,7 +37,7 @@
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
-                Tabla ventas
+                Listado de Ventas
             </div>
             <div class="card-body">
                 <table id="datatablesSimple" class="table table-striped table-bordered">
@@ -220,7 +220,7 @@
                     }
                 ],
                 language: {
-                    "search": "Buscar ventas:",
+                    "search": "Buscar Ventas:",
                     "lengthMenu": "Mostrar _MENU_ registros por pagina",
                     "info": "Mostrando pagina _PAGE_ de _PAGES_",
                     "paginate": {

@@ -54,7 +54,7 @@ class clienteController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('clientes.index')->with('success', 'Cliente registrado');
+        return redirect()->route('clientes.index')->with('success', 'Cliente Registrado.');
     }
 
     /**
@@ -91,7 +91,7 @@ class clienteController extends Controller
             DB::rollBack();
         }
 
-        return redirect()->route('clientes.index')->with('success', 'Cliente editado');
+        return redirect()->route('clientes.index')->with('success', 'Cliente Actualizado.');
     }
 
     /**
@@ -106,13 +106,13 @@ class clienteController extends Controller
                 ->update([
                     'estado' => 0
                 ]);
-            $message = 'Cliente eliminado';
+            $message = 'Cliente Desactivado.';
         } else {
             Persona::where('id', $persona->id)
                 ->update([
                     'estado' => 1
                 ]);
-            $message = 'Cliente restaurado';
+            $message = 'Cliente Activado.';
         }
 
         return redirect()->route('clientes.index')->with('success', $message);
