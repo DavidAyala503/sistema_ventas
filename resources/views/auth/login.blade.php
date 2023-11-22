@@ -12,13 +12,13 @@
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-primary">
+<body class="bg-success">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-lg-5">
+                        <div class="col-lg-5" >
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
                                     <h3 class="text-center font-weight-light my-4">Acceso al Sistema</h3>
@@ -47,7 +47,7 @@
                                             <label for="inputPassword">Contraseña:</label>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <button class="btn btn-primary" type="submit"><a>Iniciar
+                                            <button class="btn btn-success" type="submit"><a>Iniciar
                                                     Sesión</a></button>
                                         </div>
                                     </form>
@@ -59,15 +59,10 @@
             </main>
         </div>
         <div id="layoutAuthentication_footer">
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; 2023 - Estándares De Programación - Ciclo 02-2023 -
-                            UTEC</div>
-                        <div>
-                            <a href="#">Términos y Condiciones</a>
-                        </div>
-                    </div>
+            <footer class="py-1 bg-dark mt-auto">
+                <div class="text-center p-1 text-white">
+                    Copyright &copy; 2023 - Estándares De Programación - Ciclo 02-2023 -
+                    Universidad Tecnológica de El Salvador
                 </div>
             </footer>
         </div>

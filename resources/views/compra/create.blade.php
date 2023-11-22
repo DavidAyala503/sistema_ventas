@@ -42,19 +42,19 @@
                         <!-----Cantidad---->
                         <div class="col-sm-4 mb-2">
                             <label for="cantidad" class="form-label">Cantidad:</label>
-                            #<input type="number" name="cantidad" id="cantidad" class="form-control">
+                            <input type="number" name="cantidad" id="cantidad" class="form-control">
                         </div>
 
                         <!-----Precio de compra---->
                         <div class="col-sm-4 mb-2">
                             <label for="precio_compra" class="form-label">Precio de compra:</label>
-                            $<input type="number" name="precio_compra" id="precio_compra" class="form-control" step="0.1">
+                            <input type="number" name="precio_compra" id="precio_compra" class="form-control" step="0.1">
                         </div>
 
                         <!-----Precio de venta---->
                         <div class="col-sm-4 mb-2">
                             <label for="precio_venta" class="form-label">Precio de venta:</label>
-                            $<input type="number" name="precio_venta" id="precio_venta" class="form-control" step="0.1">
+                            <input type="number" name="precio_venta" id="precio_venta" class="form-control" step="0.1">
                         </div>
 
                         <!-----botón para agregar--->
