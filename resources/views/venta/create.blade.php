@@ -35,7 +35,7 @@
                             <!-----Producto---->
                             <div class="col-12">
                                 <select name="producto_id" id="producto_id" class="form-control selectpicker"
-                                    data-live-search="true" data-size="1" title="Busque un producto aquí">
+                                    data-live-search="true" data-size="1" title="Busque un producto aquí...">
                                     @foreach ($productos as $item)
                                         <option value="{{ $item->id }}-{{ $item->stock }}-{{ $item->precio_venta }}">
                                             {{ $item->codigo . ' ' . $item->nombre }}</option>
@@ -88,7 +88,7 @@
                                                 <th class="text-white">#</th>
                                                 <th class="text-white">Producto</th>
                                                 <th class="text-white">Cantidad</th>
-                                                <th class="text-white">Precio venta</th>
+                                                <th class="text-white">Precio Venta</th>
                                                 <th class="text-white">Descuento</th>
                                                 <th class="text-white">Subtotal</th>
                                                 <th></th>
@@ -108,17 +108,17 @@
                                         <tfoot>
                                             <tr>
                                                 <th></th>
-                                                <th colspan="4">Sumas</th>
+                                                <th colspan="4">Sumas:</th>
                                                 <th colspan="2">$<span id="sumas">0</span></th>
                                             </tr>
                                             <tr>
                                                 <th></th>
-                                                <th colspan="4">IVA %</th>
+                                                <th colspan="4">IVA (13%):</th>
                                                 <th colspan="2">$<span id="iva">0</span></th>
                                             </tr>
                                             <tr>
                                                 <th></th>
-                                                <th colspan="4">Total</th>
+                                                <th colspan="4">Total General:</th>
                                                 <th colspan="2"><input type="hidden" name="total" value="0"
                                                         id="inputTotal">$<span id="total">0</span></th>
                                             </tr>
@@ -142,7 +142,7 @@
                 <!-----Venta---->
                 <div class="col-xl-4">
                     <div class="text-white bg-success p-1 text-center">
-                        Datos generales
+                        Datos Generales
                     </div>
                     <div class="p-3 border border-3 border-success">
                         <div class="row gy-4">
@@ -150,7 +150,7 @@
                             <div class="col-12">
                                 <label for="cliente_id" class="form-label">Cliente:</label>
                                 <select name="cliente_id" id="cliente_id" class="form-control selectpicker show-tick"
-                                    data-live-search="true" title="Selecciona" data-size='2'>
+                                    data-live-search="true" title="Seleccione un cliente..." data-size='2'>
                                     @foreach ($clientes as $item)
                                         <option value="{{ $item->id }}">{{ $item->persona->razon_social }}</option>
                                     @endforeach
@@ -164,7 +164,7 @@
                             <div class="col-12">
                                 <label for="comprobante_id" class="form-label">Comprobante:</label>
                                 <select name="comprobante_id" id="comprobante_id" class="form-control selectpicker"
-                                    title="Selecciona">
+                                    title="Seleccione un comprobante...">
                                     @foreach ($comprobantes as $item)
                                         <option value="{{ $item->id }}">{{ $item->tipo_comprobante }}</option>
                                     @endforeach
@@ -186,7 +186,7 @@
 
                             <!--Impuesto---->
                             <div class="col-sm-6">
-                                <label for="impuesto" class="form-label">Impuesto(IVA):</label>
+                                <label for="impuesto" class="form-label">Impuesto (IVA):</label>
                                 <input readonly type="text" name="impuesto" id="impuesto"
                                     class="form-control border-success">
                                 @error('impuesto')

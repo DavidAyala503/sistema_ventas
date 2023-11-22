@@ -140,7 +140,7 @@
                             <span title="Impuesto" id="icon-form" class="input-group-text"><i
                                     class="fa-solid fa-percent"></i></span>
                             <input disabled type="text" id="input-impuesto" class="form-control"
-                                value="{{ $compra->impuesto }}">
+                                value="{{$compra->impuesto }}">
                         </div>
                     </div>
                 </div>
@@ -158,10 +158,10 @@
                     <thead class="bg-primary">
                         <tr class="align-top">
                             <th class="text-white">Producto</th>
-                            <th class="text-white">Cantidad - #</th>
-                            <th class="text-white">Precio de Compra - $</th>
-                            <th class="text-white">Precio de Venta - $</th>
-                            <th class="text-white">Subtotal - $</th>
+                            <th class="text-white">Cantidad</th>
+                            <th class="text-white">Precio de Compra</th>
+                            <th class="text-white">Precio de Venta</th>
+                            <th class="text-white">Subtotal</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -190,15 +190,15 @@
                             <th colspan="5"></th>
                         </tr>
                         <tr>
-                            <th colspan="4">Sumas: $</th>
+                            <th colspan="4">Sumas:</th>
                             <th id="th-suma"></th>
                         </tr>
                         <tr>
-                            <th colspan="4">IVA(13%): $</th>
+                            <th colspan="4">IVA(13%):</th>
                             <th id="th-iva"></th>
                         </tr>
                         <tr>
-                            <th colspan="4">Total General: $</th>
+                            <th colspan="4">Total General:</th>
                             <th id="th-total"></th>
                         </tr>
                     </tfoot>
@@ -225,9 +225,9 @@
                 cont += parseFloat(filasSubtotal[i].innerHTML);
             }
 
-            $('#th-suma').html(cont);
-            $('#th-iva').html(impuesto);
-            $('#th-total').html(round(cont + parseFloat(impuesto)));
+            $('#th-suma').html('$' + cont);
+            $('#th-iva').html('$' + impuesto);
+            $('#th-total').html('$' + round(cont + parseFloat(impuesto)));
         }
 
         function round(num, decimales = 2) {
