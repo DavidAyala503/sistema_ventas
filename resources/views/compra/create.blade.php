@@ -26,10 +26,10 @@
             <div class="row gy-4">
                 <!------Compra producto---->
                 <div class="col-xl-8">
-                    <div class="text-white bg-primary p-1 text-center">
+                    <div class="text-white bg-success p-1 text-center">
                         Detalles de la Compra
                     </div>
-                    <div class="p-3 border border-3 border-primary">
+                    <div class="p-3 border border-3 border-success">
                         <div class="row">
                             <!-----Producto---->
                             <div class="col-12 mb-4">
@@ -63,14 +63,14 @@
 
                             <!-----botón para agregar--->
                             <div class="col-12 mb-4 mt-2 text-end">
-                                <button id="btn_agregar" class="btn btn-primary" type="button">Agregar</button>
+                                <button id="btn_agregar" class="btn btn-success" type="button">Agregar</button>
                             </div>
 
                             <!-----Tabla para el detalle de la compra--->
                             <div class="col-12">
                                 <div class="table-responsive">
                                     <table id="tabla_detalle" class="table table-hover">
-                                        <thead class="bg-primary">
+                                        <thead class="bg-success">
                                             <tr>
                                                 <th class="text-white">#</th>
                                                 <th class="text-white">Producto</th>

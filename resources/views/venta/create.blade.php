@@ -26,10 +26,10 @@
 
                 <!------venta producto---->
                 <div class="col-xl-8">
-                    <div class="text-white bg-primary p-1 text-center">
+                    <div class="text-white bg-success p-1 text-center">
                         Detalles de la Venta
                     </div>
-                    <div class="p-3 border border-3 border-primary">
+                    <div class="p-3 border border-3 border-success">
                         <div class="row gy-4">
 
                             <!-----Producto---->
@@ -76,14 +76,14 @@
 
                             <!-----botón para agregar--->
                             <div class="col-12 text-end">
-                                <button id="btn_agregar" class="btn btn-primary" type="button">Agregar</button>
+                                <button id="btn_agregar" class="btn btn-success" type="button">Agregar</button>
                             </div>
 
                             <!-----Tabla para el detalle de la venta--->
                             <div class="col-12">
                                 <div class="table-responsive">
                                     <table id="tabla_detalle" class="table table-hover">
-                                        <thead class="bg-primary">
+                                        <thead class="bg-success">
                                             <tr>
                                                 <th class="text-white">#</th>
                                                 <th class="text-white">Producto</th>
@@ -131,7 +131,7 @@
                             <div class="col-12">
                                 <button id="cancelar" type="button" class="btn btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal">
-                                    Cancelar venta
+                                    Cancelar Venta
                                 </button>
                             </div>
 
