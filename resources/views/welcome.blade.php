@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
 
 <head>
+    <link rel="shortcut icon" href="{{ asset('assets/img/icon.png') }}" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -24,7 +25,7 @@
             <a class="navbar-brand" href="{{ route('panel') }}">
                 <img src="{{ asset('assets/img/icon.png') }}" alt="Logo" width="30" height="30"
                     class="d-inline-block align-text-top">
-                Sistema de Venta
+                Tienda Hernández
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -62,115 +63,62 @@
                 <img src="{{ asset('assets/img/img_carrusel_3.png') }}" class="d-block w-100"
                     alt="Banner de contáctanos">
             </div>
+            <div class="carousel-item">
+                <img src="{{ asset('assets/img/img_carrusel_4.png') }}" class="d-block w-100"
+                    alt="Banner de contáctanos">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('assets/img/img_carrusel_5.png') }}" class="d-block w-100"
+                    alt="Banner de contáctanos">
+            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Siguiente</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Anterior</span>
         </button>
     </div>
-
+    <br><br>
     <!---Section Ventajas / Desventajas--->
-    <div class="container-md">
-        <div class="row my-4 g-5">
-            <div class="col-lg-6">
-                <div class="card border-0">
-                    <div
-                        class="card-header text-center text-info border-info fs-5 fw-semibold border-3 rounded-start rounded-end">
-                        Con un sistema de ventas web...
-                    </div>
-                    <div class="card-body">
-                        <ul class="text-light">
-                            <li>
-                                <p class="card-text mb-2">Tienes acceso a tu sistema 24/7 y desde cualquier parte.</p>
-                            </li>
-                            <li>
-                                <p class="card-text mb-2">Permite la automatización de tareas como la gestión de
-                                    inventario,
-                                    el procesamiento de pedidos y la recopilación de datos,
-                                    lo que ahorra tiempo y reduce errores.</p>
-                            </li>
-                            <li>
-                                <p class="card-text mb-2">Proporcionan datos valiosos sobre el comportamiento de los
-                                    clientes,
-                                    lo que te permite tomar mejores desiciones.</p>
-                            </li>
-                            <li>
-                                <p class="card-text mb-2">Puedes expandir tu negocio en línea de manera relativamente
-                                    sencilla
-                                    al agregar más productos, servicios o incluso dirigirte a nuevos mercados.</p>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
+    <div>
+        <div class="card border-0 container-fluid">
+            <div
+                class="card-header text-center text-info border-info fs-5 fw-semibold border-3 rounded-start rounded-end">
+                Estimado Cliente...
             </div>
-            <div class="col-lg-6">
-                <div class="card border-0">
-                    <div
-                        class="card-header text-center text-info border-info fs-5 fw-semibold border-3 rounded-start rounded-end">
-                        Sin un sistema de ventas web...
-                    </div>
-                    <div class="card-body">
-                        <ul class="text-light">
-                            <li>
-                                <p class="card-text mb-2">Estas sujeto a un horario de funcioamiento específico.</p>
-                            </li>
-                            <li>
-                                <p class="card-text mb-2">Las operaciones sin un sistema web a menudo requieren una
-                                    mayor cantidad de trabajo manual,
-                                    lo que puede llevar más tiempo y aumentar la posibilidad de errores.</p>
-                            </li>
-                            <li>
-                                <p class="card-text mb-2">Dificulta la recopilación y análisis de datos sobre el
-                                    rendimiento del
-                                    negocio y el comportamiento de los clientes.</p>
-                            </li>
-                            <li>
-                                <p class="card-text mb-2">La expansión de un negocio físico puede ser más complicada y
-                                    costosa en
-                                    términos de abrir nuevas ubicaciones o llegar a un mercado más amplio.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!---Section Frase--->
-    <section class="container-fluid bg-body-secondary text-center">
-        <div class="container p-5">
-            <h2 class="text-light mb-5">Dale un nuevo enfoque a tu negocio
-                <span class="text-info"><br>¡Es momento de usar la tecnología como aliada!</span>
-            </h2>
-            <div class="">
-                <a href="{{ route('login') }}" role="button" class="btn btn-primary">Iniciar Sesión</a>
+            <div class="card-body">
+                <ul class="text-light">
+                    <p>¡Te damos la más cordial bienvenida a la caja de Tienda Hernández! Nos sentimos orgullosos de
+                        ofrecer a cada uno de nuestros clientes una extensa selección de productos frescos y de alta
+                        calidad, diseñados para satisfacer las demandas de su vida diaria. Desde elementos esenciales
+                        hasta auténticas delicias gourmet, en Tienda Hernández nos comprometemos a proporcionarte, con
+                        la colaboración de nuestro dedicado equipo, la experiencia de compra definitiva para nuestros
+                        apreciados clientes. Nuestro enfoque se centra en la variedad, la frescura y el servicio
+                        personalizado, para asegurarnos de que tu visita a nuestra tienda sea siempre una experiencia
+                        excepcional. ¡Gracias por confiar en nosotros para tus necesidades diarias!</p>
+                </ul>
             </div>
         </div>
+        <br>
+        <!---Footer--->
+        <footer class="text-center text-white">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                Copyright &copy; 2023 - Estándares De Programación - Ciclo 02-2023 -
+                Universidad Tecnológica de El Salvador
+            </div>
+            <!-- Copyright -->
+        </footer>
 
-    </section>
-
-    <!---Footer--->
-    <footer class="text-center text-white">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            Copyright &copy; 2023 - Estándares De Programación - Ciclo 02-2023 -
-            Universidad Tecnológica de El Salvador
-        </div>
-        <!-- Copyright -->
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>

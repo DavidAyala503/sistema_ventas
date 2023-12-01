@@ -197,6 +197,9 @@
                                     doc.content[1].table.body[i][j].alignment = 'left';
                                 }
                             }
+
+                            // Agrega la imagen al encabezado centrada
+                            //image: 'public/assets/img/icon.png', // Ruta de la imagen
                         }
                     },
                     {
@@ -206,6 +209,7 @@
                         },
                         text: 'IMPRIMIR',
                         download: 'open',
+
                         title: 'Informe de Presentaciones - ' + obtenerFechaYHora(),
                         customize: function(doc) {
                             // Centrar y ajustar ancho de la tabla en el PDF

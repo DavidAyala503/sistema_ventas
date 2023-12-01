@@ -2,12 +2,13 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <link rel="shortcut icon" href="{{ asset('assets/img/icon.png') }}" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Inicio de sesión del sistema" />
-    <meta name="author" content="SakCode" />
-    <title>Sistema de Ventas - Login</title>
+    <meta name="author" content="David Ayala" />
+    <title>Tienda Hernández - Login</title>
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
@@ -21,7 +22,7 @@
                         <div class="col-lg-5" >
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
-                                    <h3 class="text-center font-weight-light my-4">Acceso al Sistema</h3>
+                                    <h3 class="text-center font-weight-light my-4">Tienda Hernández - Acceso al Sistema</h3>
                                 </div>
                                 <div class="card-body">
                                     @if ($errors->any())
