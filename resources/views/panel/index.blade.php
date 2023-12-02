@@ -26,27 +26,54 @@
             <li class="breadcrumb-item active">Panel</li>
         </ol>
         <div class="row">
-            <!----Clientes--->
+
+            <!----Compra--->
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-success text-white mb-4">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-8">
-                                <i class="fa-solid fa-people-group"></i><span class="m-1">Clientes</span>
+                                <i class="fa-solid fa-store"></i><span class="m-1">Compras</span>
                             </div>
                             <div class="col-4">
                                 <?php
                                 
-                                use App\Models\Cliente;
+                                use App\Models\Compra;
                                 
-                                $clientes = count(Cliente::all());
+                                $compras = count(Compra::all());
                                 ?>
-                                <p class="text-center fw-bold fs-4">{{ $clientes }}</p>
+                                <p class="text-center fw-bold fs-4">{{ $compras }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{ route('clientes.index') }}">Ver más</a>
+                        <a class="small text-white stretched-link" href="{{ route('compras.index') }}">Ver más</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!----Venta--->
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-success text-white mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-8">
+                                <i class="fa-solid fa-store"></i><span class="m-1">Ventas</span>
+                            </div>
+                            <div class="col-4">
+                                <?php
+                                
+                                use App\Models\Venta;
+                                
+                                $ventas = count(Venta::all());
+                                ?>
+                                <p class="text-center fw-bold fs-4">{{ $ventas }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="{{ route('ventas.index') }}">Ver más</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -78,27 +105,27 @@
                 </div>
             </div>
 
-            <!----Compra--->
+            <!----Presentaciones--->
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-success text-white mb-4">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-8">
-                                <i class="fa-solid fa-store"></i><span class="m-1">Compras</span>
+                                <i class="fa-solid fa-box-archive"></i><span class="m-1">Presentaciones</span>
                             </div>
                             <div class="col-4">
                                 <?php
                                 
-                                use App\Models\Compra;
+                                use App\Models\Presentacione;
                                 
-                                $compras = count(Compra::all());
+                                $presentaciones = count(Presentacione::all());
                                 ?>
-                                <p class="text-center fw-bold fs-4">{{ $compras }}</p>
+                                <p class="text-center fw-bold fs-4">{{ $presentaciones }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{ route('compras.index') }}">Ver más</a>
+                        <a class="small text-white stretched-link" href="{{ route('presentaciones.index') }}">Ver más</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -130,32 +157,6 @@
                 </div>
             </div>
 
-            <!----Presentaciones--->
-            <div class="col-xl-3 col-md-6">
-                <div class="card bg-success text-white mb-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-8">
-                                <i class="fa-solid fa-box-archive"></i><span class="m-1">Presentaciones</span>
-                            </div>
-                            <div class="col-4">
-                                <?php
-                                
-                                use App\Models\Presentacione;
-                                
-                                $presentaciones = count(Presentacione::all());
-                                ?>
-                                <p class="text-center fw-bold fs-4">{{ $presentaciones }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{ route('presentaciones.index') }}">Ver más</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                    </div>
-                </div>
-            </div>
-
             <!----Producto--->
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-success text-white mb-4">
@@ -182,6 +183,32 @@
                 </div>
             </div>
 
+            <!----Clientes--->
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-success text-white mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-8">
+                                <i class="fa-solid fa-people-group"></i><span class="m-1">Clientes</span>
+                            </div>
+                            <div class="col-4">
+                                <?php
+                                
+                                use App\Models\Cliente;
+                                
+                                $clientes = count(Cliente::all());
+                                ?>
+                                <p class="text-center fw-bold fs-4">{{ $clientes }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="{{ route('clientes.index') }}">Ver más</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+
             <!----Proveedore--->
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-success text-white mb-4">
@@ -203,32 +230,6 @@
                     </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="{{ route('proveedores.index') }}">Ver más</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                    </div>
-                </div>
-            </div>
-
-            <!----Users--->
-            <div class="col-xl-3 col-md-6">
-                <div class="card bg-success text-white mb-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-8">
-                                <i class="fa-solid fa-user"></i><span class="m-1">Usuarios</span>
-                            </div>
-                            <div class="col-4">
-                                <?php
-                                
-                                use App\Models\User;
-                                
-                                $users = count(User::all());
-                                ?>
-                                <p class="text-center fw-bold fs-4">{{ $users }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{ route('users.index') }}">Ver más</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
