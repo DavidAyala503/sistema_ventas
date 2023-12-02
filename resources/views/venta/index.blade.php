@@ -26,6 +26,7 @@
             <li class="breadcrumb-item active">Ventas</li>
         </ol>
 
+        <img src="{{ asset('assets/img/tienda_hernandez2.png') }}" class="d-block w-100">
         @can('crear-venta')
             <div class="mb-4">
                 <a href="{{ route('ventas.create') }}">

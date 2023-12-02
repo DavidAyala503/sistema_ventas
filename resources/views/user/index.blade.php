@@ -22,6 +22,7 @@
             <li class="breadcrumb-item active">Usuarios</li>
         </ol>
 
+        <img src="{{ asset('assets/img/tienda_hernandez2.png') }}" class="d-block w-100">
         @can('crear-user')
             <div class="mb-4">
                 <a href="{{ route('users.create') }}">

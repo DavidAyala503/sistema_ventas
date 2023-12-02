@@ -23,6 +23,7 @@
             <li class="breadcrumb-item active">Proveedores</li>
         </ol>
 
+        <img src="{{ asset('assets/img/tienda_hernandez2.png') }}" class="d-block w-100">
         @can('crear-proveedore')
             <div class="mb-4">
                 <a href="{{ route('proveedores.create') }}">

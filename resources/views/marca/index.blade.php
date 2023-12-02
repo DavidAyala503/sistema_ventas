@@ -23,6 +23,7 @@
         <li class="breadcrumb-item active">Marcas</li>
     </ol>
 
+    <img src="{{ asset('assets/img/tienda_hernandez2.png') }}" class="d-block w-100">
     @can('crear-marca')
     <div class="mb-4">
         <a href="{{route('marcas.create')}}">

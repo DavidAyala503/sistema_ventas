@@ -21,7 +21,7 @@
             <li class="breadcrumb-item"><a href="{{ route('panel') }}">Inicio</a></li>
             <li class="breadcrumb-item active">Presentaciones</li>
         </ol>
-
+        <img src="{{ asset('assets/img/tienda_hernandez2.png') }}" class="d-block w-100">
         @can('crear-presentacione')
             <div class="mb-4">
                 <a href="{{ route('presentaciones.create') }}">
