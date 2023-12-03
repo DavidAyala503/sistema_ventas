@@ -11,7 +11,7 @@
     clientes, proveedores, productos, categorías, etc. Ideal para pequeños y medianos negocios que deesen 
     automatizar sus procesos y tener a la mano cualquier información sobre su negocio" />
     <meta name="author" content="David Ayala" />
-    <title>Sistema de Venta</title>
+    <title>Tienda Hernández</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
