@@ -2,7 +2,7 @@
 # Punto de Venta - Tienda Hernandez
 
 ## Dependencias
-- Se debe tener instalado [XAMPP](https://laragon.org/download/index.html "Laragon") (versión **PHP** **8.1** o superior)  
+- Se debe tener instalado [Laragon](https://laragon.org/download/index.html "Laragon") (versión **PHP** **8.1** o superior)  
 - Se debe tener instalado [Composer](https://getcomposer.org/download/ "Composer") (versión **2.6.5** o superior)
 - Se debe tener configurado composer y asosiciado a la version de php de su servidor web
 - Se debe tener instalado [Node.js](https://nodejs.org/en "Composer") (versión **20.10.0 LTS**)
