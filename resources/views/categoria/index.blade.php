@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'categorías')
+@section('title', 'Categorías')
 
 @push('css-datatable')
 @endpush
